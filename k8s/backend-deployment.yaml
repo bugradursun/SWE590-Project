@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: todo
+  template:
+    metadata:
+      labels:
+        app: todo
+    spec:
+      containers:
+        - name: backend
+          image: us-central1-docker.pkg.dev/swe590project-460908/todo-repo/todo-backend:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: DB_HOST
+              value: "35.202.245.57"
+            - name: DB_USER
+              value: "todo_user"
+            - name: DB_PASSWORD
+              value: "todo_pass"
+            - name: DB_NAME
+              value: "todo_db"
