@@ -6,6 +6,7 @@ This project is a cloud-native Todo application designed, deployed, and tested o
 
 ## 🌐 Architecture Overview
 
+![Screenshot 2025-05-28 205406](https://github.com/user-attachments/assets/7fd6eec8-63aa-426d-8543-fc6680a26079)
 
 
 ---
